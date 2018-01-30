@@ -19,12 +19,13 @@ var PostListComponent = (function () {
         var _this = this;
         this.postService.getAllPosts().subscribe(function (data) { return _this.posts = data; });
     };
+    PostListComponent.prototype.printComments = function (comments) {
+        console.log(comments);
+    };
     PostListComponent.prototype.getComments = function (index) {
         var _this = this;
         this.postService.getCommentsForPost(index).subscribe(function (data) { return _this.comments = data; });
-    };
-    PostListComponent.prototype.printComments = function (comments) {
-        console.log(comments);
+        this.printComments(this.comments);
     };
     return PostListComponent;
 }());
