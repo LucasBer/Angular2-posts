@@ -8,8 +8,8 @@ import { Comment } from './comment'
 
 @Injectable()
 export class PostService {
+  
 
-  posts : Posts[]
 
    constructor(private http: HttpClient) {}
 
